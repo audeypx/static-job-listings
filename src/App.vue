@@ -22,10 +22,8 @@
               <h3 class="company">
                 {{ job.company_name }}
               </h3>
-              <button class="new-btn">{{ job.new }}</button>
-              <button class="feature-btn" v-if="job.featured">
-                {{ job.featured }}
-              </button>
+              <button class="new-btn" v-if="job.new">NEW!</button>
+              <button class="feature-btn" v-if="job.featured">FEATURED</button>
               <h2 class="job-title">
                 <p>{{ job.jobTitle }}</p>
               </h2>
@@ -41,7 +39,11 @@
               <div class="skills">
                 <div class="choose role">{{ job.role }}</div>
                 <div class="choose level">{{ job.level }}</div>
-                <div class="choose languages" v-for="(x, y) in job.languages" :key="y">
+                <div
+                  class="choose languages"
+                  v-for="(x, y) in job.languages"
+                  :key="y"
+                >
                   {{ x }}
                 </div>
               </div>
@@ -303,78 +305,86 @@ export default {
         {
           company_name: "Photosnap",
           jobTitle: "Senior Frontend Developer",
-          new: "NEW!",
+          new: true,
           featured: true,
           location: "USA only",
           date: "1d ago",
           period: "Full Time",
           role: "Frontend",
           level: "Senior",
-          languages:[
-            "HTML",
-            "CSS",
-            "Javascript",
-          ]
+          languages: ["HTML", "CSS", "Javascript"],
+        },
+        {
+          company_name: "Manage",
+          jobTitle: "FullStack Developer",
+          new: true,
+          featured: true,
+          location: "Remote",
+          date: "1d ago",
+          period: "Part Time",
+          role: "Fullstack",
+          level: "Midweight",
+          languages: ["Python", "React"],
         },
         {
           company_name: "Account",
-          jobTitle: "Junior Frontend Develope,r",
-          new: "NEW!",
+          jobTitle: "Junior Frontend Developer",
+          new: true,
           featured: false,
           location: "USA only",
           date: "2d ago",
           period: "Part Time",
           role: "Frontend",
           level: "Junior",
-          languages: "Javascript",
+          languages: ["Javascript", "React", "Sass"],
         },
         {
           company_name: "MyHome",
           jobTitle: "Junior Frontend Developer",
-          new: "NEW!",
+          new: true,
           featured: false,
           location: "USA only",
           date: "5d ago",
           period: "Contract",
           role: "Frontend",
           level: "Junior",
-          languages: "HTML",
+          languages: ["CSS", "Javascript"],
         },
         {
           company_name: "Shortly",
           jobTitle: "Junior Developer",
-          new: "",
+          new: false,
           featured: false,
           location: "Worldwide",
           date: "2w ago",
           period: "Full Time",
           role: "Frontend",
           level: "Junior",
-          languages: "HTML",
+          languages: ["HTML", "Javascript", "Sass"],
         },
         {
           company_name: "Insure",
           jobTitle: "Junior Frontend Developer",
-          new: "",
+          new: false,
           featured: false,
           location: "USA only",
           date: "2w ago",
           period: "Full Time",
           role: "Frontend",
           level: "Junior",
-          languages: "Javascript",
+          languages: ["Javascript", "Vue", "Sass"],
         },
         {
           company_name: "The Air Filter Company",
           jobTitle: "Front-end Dev",
-          new: "",
+          new: false,
           featured: false,
           location: "Worldwide",
           date: "1mo ago",
           period: "Part Time",
           role: "Frontend",
           level: "Junior",
-          languages: "Javascript" ,
+          languages: ["Javascript", "React", "Sass"],
         },
       ],
       displayJobs: [],
