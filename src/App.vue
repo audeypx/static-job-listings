@@ -13,8 +13,8 @@
       </div>
       <span class="close">Clear</span>
     </header>
-    <div class="">
-      <ul id="items " class="">
+    <div class="container">
+      <ul id="items" class="main-content">
         <li v-for="(job, i) in displayJobs" :key="i" class="">
           <div class="card featured">
             <img src="images/photosnap.svg" alt="photosnap" />
@@ -377,7 +377,7 @@ export default {
         {
           company_name: "The Air Filter Company",
           jobTitle: "Front-end Dev",
-          new: false,
+          new: true,
           featured: false,
           location: "Worldwide",
           date: "1mo ago",
