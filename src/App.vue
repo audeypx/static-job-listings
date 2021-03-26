@@ -534,7 +534,7 @@ h3 {
 .item:hover::after {
   background-color: hsl(180, 14%, 20%);
 }
-/*cards*/
+/*cards-part*/
 
 .card {
   background-color: hsl(180, 31%, 95%);
