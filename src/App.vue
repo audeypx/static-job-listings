@@ -475,7 +475,7 @@ h3 {
   font-size: 1rem;
 }
 
-/*header*/
+/*header-part*/
 
 #search-field {
   background: hsl(180, 31%, 95%);
@@ -587,8 +587,6 @@ img {
   padding-left: 0.5em;
   padding-right: 0.5em;
 }
-
-/*skills*/
 
 .skills {
   margin-top: 1rem;
