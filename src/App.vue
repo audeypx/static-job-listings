@@ -10,6 +10,7 @@
           class="tw-w-full focus:tw-outline-none"
           @keyup.prevent="filterJobs"
         />
+        <!-- testing for stuff -->
       </div>
       <span class="close">Clear</span>
     </header>
@@ -475,7 +476,7 @@ h3 {
   font-size: 1rem;
 }
 
-/*header-part*/
+/*headerpart*/
 
 #search-field {
   background: hsl(180, 31%, 95%);
