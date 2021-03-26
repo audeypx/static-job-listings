@@ -18,6 +18,11 @@
         <li v-for="(job, i) in displayJobs" :key="i" class="">
           <div class="card featured">
             <img src="images/photosnap.svg" alt="photosnap" />
+            <img
+        v-bind:src="picture"
+        :alt="firstName"
+        :class="gender"
+      />
             <div class="col-left">
               <h3 class="company">
                 {{ job.company_name }}
@@ -408,18 +413,7 @@ export default {
       }
       this.displayJobs = this.jobs;
     },
-    // async fetchJobs() {
-    //   try {
-    //     const { data } = await this.$http.get("fetch_approved_jobs")
-    //     const { error, message, data: jobs } = data;
-    //     if (error === 0) {
-    //       this.jobs = jobs;
-    //       this.displayJobs = jobs
-    //       this.$toast.success(message);
-    //       console.log(this.jobs)
-    //     }
-    //   } catch (error) {}
-    // },
+    
   },
   mounted() {
     this.displayJobs = this.jobs;
